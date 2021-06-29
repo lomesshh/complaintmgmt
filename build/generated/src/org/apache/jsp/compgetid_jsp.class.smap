@@ -1,0 +1,14 @@
+SMAP
+compgetid_jsp.java
+JSP
+*S JSP
+*F
++ 0 compgetid.jsp
+compgetid.jsp
+*L
+1,123:45
+123,6:168
+129:174,3
+130,6:177
+135,13:183
+*E
