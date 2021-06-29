@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Feedback Form</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--        <script src='feedmail.js'></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+(function() {
+emailjs.init("user_7xsDwPZIIDGzdRgQaOPau");
+})();
+</script>-->
+
+		<style>
+		
+		* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://i.postimg.cc/QdN1Nn1p/feedback.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+}
+
+.ui {
+    background-color: #333;
+    padding: 30px;
+    margin-top: 50px;  
+    opacity: 0.8;
+}
+.ui label{
+    color: #fff;
+}
+
+.ui h1{
+    color: #fff;
+    font-family: cursive;
+}
+
+.inputfield
+ {  
+ position:relative;  
+ top:30px;  
+ width:900px;  
+ line-height: 60px!important;  
+ }
+ 
+		
+		</style>
+    </head>
+    <body>    
+        
+        
+        
+        <div class="container">
+            
+           <div class="row">
+               
+               <div class="col-log-3"></div>
+               
+               <div class="col-log-6">
+                   <div class="ui">
+                       <h1 class="text-center">Please provide your feedback below</h1><br>
+                       <form action='feedback.jsp' class="form-group text-center"  method="post">
+					   <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <label>How do you rate your overall experience?</label>
+                                <p>
+                                   <!-- <label class="radio-inline">
+                                        <input type="radio" name="experience" required="required" id="radio_experience" value="Good" >
+                                        GOOD 
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="experience" id="radio_experience" value="Average" >
+                                        AVERAGE 
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="experience" id="radio_experience" value="Bad" >
+                                        BAD 
+                                    </label>  -->
+                                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+				   <label class="btn btn-success">
+				<input type="radio" name="experience" required="required" id="experience" autocomplete="off" value="Good"> Good
+				   </label>
+				 <label class="btn btn-warning">
+				<input type="radio" name="experience" id="experience" autocomplete="off" value="Average"> Average
+				  </label>
+				<label class="btn btn-danger">
+				 <input type="radio" name="experience" id="experience" autocomplete="off" value="Bad"> Bad
+				  </label>
+				</div>
+                                </p>
+                            </div>
+                        </div>
+						
+                           <div class="row">
+                               <div class="col-lg-6">
+                                   <label>Fisrt Name :</label>
+                                   <input type="text" name="first name" id="firstname" class="form-control" required="required" placeholder="Enter your First name">
+                               </div>
+                               <div class="col-lg-6">
+                                   <label>Last Name :</label>
+                                   <input type="text" name="last name" id="lastname" class="form-control" required="required" placeholder="Enter your Last name">
+                               </div>
+                            </div>
+                           
+                           <br>
+                              <div class="row">
+                               <div class="col-lg-6">
+                                   <label>Mobile Number :</label>
+                                   <input type="tel" name="number" class="form-control" id="number" maxlength="10" required="required" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="Enter your Mobile Number">
+                               </div>
+                               <div class="col-lg-6">
+                                   <label>E-mail :</label>
+                                   <input type="email" name="email" id="email" class="form-control" required="required" placeholder="Enter your Email">
+                               </div>
+                            </div>   
+                     <br>
+                           <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <label for="comments"> Comments:</label>
+                                <textarea class="form-control" type="textarea" name="comments" id="message" required="required" placeholder="Your Comments" maxlength="6000" rows="7"></textarea>
+                            </div>
+                        </div>
+                           <br>
+                           <button value="Submit" class="btn btn-info btn-block btn-lg" onclick="sendalert()">SUBMIT</button>
+                       </form>
+                    </div>
+               </div>
+           </div>
+        </div>
+        <script>
+function sendalert() {
+    alert("your feedback submitted successfully");
+}    
+</script>
+    </body>
+</html>
